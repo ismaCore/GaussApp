@@ -1,0 +1,30 @@
+
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Holaaljsnd
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+  <ion-content padding>
+
+    <h3 text-center>Diccionario 11</h3> 
+    <ion-searchbar placeholder="Busqueda por palabra"  (ionChange)="buscar( $event)"></ion-searchbar>
+    <ion-item>
+        <ion-label color="gitHub">Palabra</ion-label>
+        <ion-label color="gitHub">Sinónimo</ion-label>
+    </ion-item>
+    <ion-list *ngFor="let sinonimo of sinonimos | filtro: textoBuscar">
+
+        <ion-item >
+            <ion-label>{{sinonimo.palabra}}</ion-label>
+            <ion-label>{{sinonimo.sinonimo}}</ion-label>
+        </ion-item>
+    </ion-list>
+
+    <ion-button expand="full"  routerLink="/guardar" color="gitHub">Agregar Palabra</ion-button>
+
+
+
+</ion-content>

@@ -1,0 +1,69 @@
+<ion-header>
+    <ion-toolbar color="gitHub">
+      <ion-title>Academia de matematicas Gauss</ion-title>
+      <!-- <img src=" ./assets/icon/favicon.png " slot=" start" width="30px" height="30px"> -->
+    </ion-toolbar>
+    
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-list>
+      <br>
+      <br>
+      <ion-item (click)="irASinonimos()">
+        <ion-thumbnail slot="start">
+          <img src="./assets/icon/house.svg">
+        </ion-thumbnail>
+        <ion-label text-center><h1>Sinónimos</h1></ion-label>
+        <ion-thumbnail slot="end">
+          <img src="./assets/icon/home.svg">
+        </ion-thumbnail>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="./assets/icon/flame.svg">
+        </ion-thumbnail>
+        <ion-label text-center><h1>Antónimos</h1></ion-label>
+        <ion-thumbnail slot="end">
+          <img src="./assets/icon/ice.svg">
+        </ion-thumbnail>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="./assets/icon/like.svg">
+        </ion-thumbnail>
+        <ion-label text-center>Palabras Agudas</ion-label>
+        <ion-thumbnail slot="end">
+          <img src="./assets/icon/mouse.svg">
+        </ion-thumbnail>
+      </ion-item>
+      <br>
+      <ion-item>
+          <ion-thumbnail slot="start">
+            <img src="./assets/icon/tree.svg">
+          </ion-thumbnail>
+          <ion-label text-center>Palabras Graves</ion-label>
+          <ion-thumbnail slot="end">
+            <img src="./assets/icon/edit.svg">
+          </ion-thumbnail>
+      </ion-item>
+      <br>
+      <ion-item>
+          <ion-thumbnail slot="start">
+            <img src="./assets/icon/helicopter.svg">
+          </ion-thumbnail>
+          <ion-label text-center>Palabras 
+            Esdrújulas</ion-label>
+          <ion-thumbnail slot="end">
+            <img src="./assets/icon/bat.svg">
+          </ion-thumbnail>
+      </ion-item>
+      <!-- <ion-item>
+        <ion-label text-center color="secondary">Silaba Tónica</ion-label>
+      </ion-item> -->
+    </ion-list>
+    <!-- <ion-button (click)="cerrarSesion()" color="warning" expand="block">Cerrar Sesión</ion-button> -->
+  </ion-content>
+

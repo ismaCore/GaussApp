@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="gitHub">
+    <ion-title>
+      Guardar Palabra
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-input required type="text" placeholder="Palabra" [(ngModel)]="sinonimo.palabra">
+      </ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-input required type="text" placeholder="Sinonimo" [(ngModel)]="sinonimo.sinonimo">
+      </ion-input>
+    </ion-item>
+
+  </ion-list>
+  <ion-button expand="full" (click)="guardar()" color="gitHub">Guardar</ion-button>
+  <br>
+  <ion-button expand="full" routerLink="/sinonimos/diccionario" color="gitHub">Regresar</ion-button>
+</ion-content>
