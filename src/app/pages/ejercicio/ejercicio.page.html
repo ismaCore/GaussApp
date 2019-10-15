@@ -13,20 +13,22 @@
     <br>
     <ion-card-content text-justify  class="fa fa-align-center" >
       
-       <H1> BONITO </H1>
+       <H1 *ngIf="mostrar" >{{sinonimo.palabra}}</H1>
     </ion-card-content>
   </ion-card>
   <br>
   <br>
 
 <ion-row align-items-center justify-content-center>
-  <ion-button fill="outline" size="large"> </ion-button>
-  <ion-button fill="outline" size="large"> </ion-button>
-  <ion-button fill="outline" size="large"></ion-button>
-  <ion-button fill="outline" size="large"> </ion-button>
-  <ion-button fill="outline" size="large"></ion-button>
-  <ion-button fill="outline" size="large"> </ion-button>
-  <ion-button fill="outline" size="large"></ion-button>
+  <ion-button fill="outline" size="default"> </ion-button>
+  <ion-button fill="outline" size="default"> </ion-button>
+  <ion-button fill="outline" size="default"> </ion-button>
+  <ion-button fill="outline" size="default"> </ion-button>
+  <ion-button fill="outline" size="default"> </ion-button>
+  <ion-button fill="outline" size="default"> </ion-button>
+  <ion-button fill="outline" size="default"> </ion-button>
+
+  
  </ion-row>
  <br><br>
  <ion-row align-items-center justify-content-center>
@@ -43,4 +45,5 @@
       <ion-button fill="outline" size="large">G</ion-button>
       <ion-button fill="outline" size="large">X</ion-button>
      </ion-row>
+
 </ion-content>

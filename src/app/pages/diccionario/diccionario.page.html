@@ -23,7 +23,13 @@
         </ion-item>
     </ion-list>
 
-    <ion-button expand="full"  routerLink="/guardar" color="gitHub">Agregar Palabra</ion-button>
+    <!-- <ion-button expand="full"  routerLink="/guardar" color="gitHub">Agregar Palabra</ion-button> -->
+
+    <ion-fab  vertical="top" horizontal="end" slot="fixed">
+        <ion-fab-button routerLink="/guardar" routerDirection="forward">
+        <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
 
 
 

@@ -24,17 +24,25 @@ export class DiccionarioPage implements OnInit {
               private loadingCtr: LoadingController) { }
 
   ngOnInit() {
+    // this.obtenerSinonimos();
+    //console.log(this.sinonimos.length);
+  }
+
+  ionViewDidEnter() {
     this.obtenerSinonimos();
+
 
   }
   async obtenerSinonimos() {
     this.loading = await this.loadingCtr.create({
       message: 'Cargando...',
-      duration: 2000
+      duration: 3000
     });
+
     this.loading.present();
-    this.serviceSinonimo.getTodos().subscribe(res => this.sinonimos = res);
+    this.serviceSinonimo.getTodos().subscribe(res => console.log(this.sinonimos = res));
     this.loading.dismiss();
+
   }
 
   buscar( event) {
