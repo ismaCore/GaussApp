@@ -11,39 +11,18 @@
       <ion-card-title>ADIVINA EL SINONIMO DE  </ion-card-title>
     </ion-card-header>
     <br>
-    <ion-card-content text-justify  class="fa fa-align-center" >
+    <ion-card-content class='ion-text-justify'  class="fa fa-align-center" >
       
        <H1 *ngIf="mostrar" >{{sinonimo.palabra}}</H1>
     </ion-card-content>
   </ion-card>
   <br>
   <br>
-
-<ion-row align-items-center justify-content-center>
-  <ion-button fill="outline" size="default"> </ion-button>
-  <ion-button fill="outline" size="default"> </ion-button>
-  <ion-button fill="outline" size="default"> </ion-button>
-  <ion-button fill="outline" size="default"> </ion-button>
-  <ion-button fill="outline" size="default"> </ion-button>
-  <ion-button fill="outline" size="default"> </ion-button>
-  <ion-button fill="outline" size="default"> </ion-button>
-
-  
- </ion-row>
  <br><br>
- <ion-row align-items-center justify-content-center>
-    <ion-button fill="outline" size="large">E</ion-button>
-    <ion-button fill="outline" size="large">C</ion-button>
-    <ion-button fill="outline" size="large">R</ion-button>
-    <ion-button fill="outline" size="large">H </ion-button>
-    <ion-button fill="outline" size="large">M</ion-button>
-   </ion-row>
-   <ion-row align-items-center justify-content-center>
-      <ion-button fill="outline" size="large">O</ion-button>
-      <ion-button fill="outline" size="large">S</ion-button>
-      <ion-button fill="outline" size="large">O</ion-button>
-      <ion-button fill="outline" size="large">G</ion-button>
-      <ion-button fill="outline" size="large">X</ion-button>
+    <ion-row class="ion-align-items-center ion-justify-content-center" >
+    <ion-button *ngFor="let boton of botones" fill="outline" size="default" color="success"></ion-button>
+  </ion-row>
+   <ion-row class="ion-align-items-center ion-justify-content-center">
+      <ion-button *ngFor="let opcion of Opciones" fill="outline" size="large">{{opcion}}</ion-button>
      </ion-row>
-
 </ion-content>

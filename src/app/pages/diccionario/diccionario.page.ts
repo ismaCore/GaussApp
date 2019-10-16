@@ -24,12 +24,13 @@ export class DiccionarioPage implements OnInit {
               private loadingCtr: LoadingController) { }
 
   ngOnInit() {
-    // this.obtenerSinonimos();
+     this.obtenerSinonimos();
     //console.log(this.sinonimos.length);
+
   }
 
   ionViewDidEnter() {
-    this.obtenerSinonimos();
+    //this.obtenerSinonimos();
 
 
   }
