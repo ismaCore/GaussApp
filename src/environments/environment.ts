@@ -1,3 +1,5 @@
+import * as firebase from 'firebase';
+
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
@@ -15,6 +17,19 @@ export const environment = {
     measurementId: "G-H12C3CTFRZ"
   }
 };
+
+// firebase.firestore().enablePersistence()
+// .catch(function(err) {
+//     if (err.code == 'failed-precondition') {
+//         // Multiple tabs open, persistence can only be enabled
+//         // in one tab at a a time.
+//         // ...
+//     } else if (err.code == 'unimplemented') {
+//         // The current browser does not support all of the
+//         // features required to enable persistence
+//         // ...
+//     }
+// });
 
 /*
  * For easier debugging in development mode, you can import the following file

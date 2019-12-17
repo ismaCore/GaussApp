@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskI } from '../../models/task.interface';
 import { SinonimoService } from '../../services/sinonimo.service';
-import { NavController, LoadingController } from '@ionic/angular';
-import { ActivatedRoute } from '@angular/router';
+import { LoadingController } from '@ionic/angular';
 
 
 
@@ -15,6 +14,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DiccionarioPage implements OnInit {
   sinonimos: TaskI[];
+  sinonimosAuxiliar:TaskI[]
   // buscar: string;
   textoBuscar = '';
   loading: any;
@@ -35,15 +35,22 @@ export class DiccionarioPage implements OnInit {
 
   }
   async obtenerSinonimos() {
+    this.sinonimos=[]
+    this.sinonimosAuxiliar=[]
     this.loading = await this.loadingCtr.create({
       message: 'Cargando...',
       duration: 3000
     });
 
     this.loading.present();
-    this.serviceSinonimo.getTodos().subscribe(res => console.log(this.sinonimos = res));
+    this.serviceSinonimo.getTodos().subscribe(res => {
+        res.forEach(element => {
+        this.sinonimosAuxiliar.push(element)
+      });
+    });
+ 
     this.loading.dismiss();
-
+    console.log(this.sinonimosAuxiliar);
   }
 
   buscar( event) {

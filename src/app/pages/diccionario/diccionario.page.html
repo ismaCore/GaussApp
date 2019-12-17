@@ -9,13 +9,13 @@
 
   <ion-content id="container" padding>
 
-    <h3 text-center>Diccionario 11</h3> 
+    <h3 class="ion-text-center">Diccionario</h3>
     <ion-searchbar placeholder="Busqueda por palabra"  (ionChange)="buscar( $event)"></ion-searchbar>
     <ion-item>
         <ion-label color="gitHub">Palabra</ion-label>
         <ion-label color="gitHub">Sinónimo</ion-label>
     </ion-item>
-    <ion-list *ngFor="let sinonimo of sinonimos | filtro: textoBuscar">
+    <ion-list *ngFor="let sinonimo of sinonimosAuxiliar | filtro: textoBuscar">
 
         <ion-item >
             <ion-label>{{sinonimo.palabra}}</ion-label>

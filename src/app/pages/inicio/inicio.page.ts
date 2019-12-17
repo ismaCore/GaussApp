@@ -15,5 +15,21 @@ export class InicioPage implements OnInit {
   irASinonimos() {
     this.router.navigate(['/sinonimos']);
   }
+  irAntonimos() {
+    this.router.navigate(['/antonimos']);
+  }
+  irAPalabrasAgudas() {
+    this.router.navigate(['/palabras']);
+
+  }
+  irAPalabrasGraves() {
+    this.router.navigate(['/palabrasgraves']);
+
+  }
+  irAPalabrasEsdrujulas() {
+    this.router.navigate(['/palabrasesdrujulas']);
+
+  }
+
 
 }

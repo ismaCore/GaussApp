@@ -14,8 +14,13 @@ export class SinonimoService {
   private todosCollection: AngularFirestoreCollection<TaskI>;
   private todos: Observable<TaskI[]>;
 
-  constructor(db: AngularFirestore) {
-    this.todosCollection = db.collection<TaskI>('sinonimos');
+  constructor(private db: AngularFirestore) {
+    
+    console.log("Hola putita desde constructor");
+  }
+
+  getTodos() {
+    this.todosCollection = this.db.collection<TaskI>('sinonimos');
     this.todos = this.todosCollection.snapshotChanges().pipe(
       map(actions => {
         return actions.map(a => {
@@ -25,9 +30,6 @@ export class SinonimoService {
         });
       })
     );
-  }
-
-  getTodos() {
     return this.todos;
   }
 

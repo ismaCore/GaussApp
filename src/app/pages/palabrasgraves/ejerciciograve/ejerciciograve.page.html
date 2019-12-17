@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="gitHub">
+      <ion-buttons slot="start">
+          <ion-button  (click)="atras()">Atras</ion-button>
+        </ion-buttons>
+    <ion-title>Ejercicio</ion-title>
+  </ion-toolbar> 
+</ion-header>
+
+<ion-content>
+<ion-row class="ion-justify-content-end">   
+     <ion-row *ngFor="let vida of vidas" >
+          <img src={{vida.url_imagen}} alt="" width="40" height="40" *ngIf="vida.mostrar">
+     </ion-row>
+</ion-row>
+<ion-row class="ion-justify-content-center">
+  <h2>¿La Siguiente Palabra es Grave?</h2>
+</ion-row>
+<ion-row class="ion-justify-content-center">
+    <h1 *ngIf="mostrar" >{{palabra.texto}}</h1>
+</ion-row>
+ <ion-progress-bar color="success" [value]="porcentaje"></ion-progress-bar>
+ <br>
+ <br>
+ <ion-row class="ion-align-items-center ion-justify-content-center">
+   <ion-button color="success" (click)="validar(true)">SI</ion-button>
+   <ion-button color="danger" (click)="validar(false)">No</ion-button>
+ </ion-row>
+</ion-content>

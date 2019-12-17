@@ -20,9 +20,10 @@
   <br>
  <br><br>
     <ion-row class="ion-align-items-center ion-justify-content-center" >
-    <ion-button *ngFor="let boton of botones" fill="outline" size="default" color="success"></ion-button>
+    <ion-button *ngFor="let boton of botones" fill="outline" size="default" color="{{boton.color}}" (click)="regresarTxt(boton.id)"> {{boton.texto}}</ion-button>
   </ion-row>
+  <br>
    <ion-row class="ion-align-items-center ion-justify-content-center">
-      <ion-button *ngFor="let opcion of Opciones" fill="outline" size="large">{{opcion}}</ion-button>
+      <ion-button (click)="enviarTxt(opcion.id)" *ngFor="let opcion of Opciones"  [hidden]="!opcion.mostrar" fill="outline" size="large">{{opcion.texto}}</ion-button>
      </ion-row>
 </ion-content>

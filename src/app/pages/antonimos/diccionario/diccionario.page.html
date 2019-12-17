@@ -1,0 +1,33 @@
+
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Holaaljsnd
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+  <ion-content id="container" padding>
+
+    <h3 class="ion-text-center">Diccionario</h3>
+    <ion-searchbar placeholder="Busqueda por palabra"  (ionChange)="buscar( $event)"></ion-searchbar>
+    <ion-item>
+        <ion-label color="gitHub">Palabra</ion-label>
+        <ion-label color="gitHub">Antónimo</ion-label>
+    </ion-item>
+    <ion-list *ngFor="let antonimo of antonimos">
+
+         <ion-item >
+            <ion-label>{{antonimo.palabra}}</ion-label>
+            <ion-label>{{antonimo.antonimo}}</ion-label>
+        </ion-item> 
+    </ion-list>
+
+    <!-- <ion-button expand="full"  routerLink="/guardar" color="gitHub">Agregar Palabra</ion-button> -->
+
+    <ion-fab  vertical="top" horizontal="end" slot="fixed">
+        <ion-fab-button routerLink="/guardar" routerDirection="forward">
+        <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+</ion-content>
